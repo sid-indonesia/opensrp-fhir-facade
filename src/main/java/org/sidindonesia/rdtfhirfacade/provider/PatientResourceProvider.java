@@ -1,26 +1,18 @@
+/* (C)2022 */
 package org.sidindonesia.rdtfhirfacade.provider;
 
 import static java.util.stream.Collectors.toList;
 
+import ca.uhn.fhir.rest.annotation.RequiredParam;
+import ca.uhn.fhir.rest.annotation.Search;
+import ca.uhn.fhir.rest.server.IResourceProvider;
 import java.util.List;
-
+import lombok.RequiredArgsConstructor;
 import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.hl7.fhir.r4.model.Enumerations.AdministrativeGender;
 import org.hl7.fhir.r4.model.Patient;
 import org.opensrp.api.domain.Client;
 import org.springframework.web.reactive.function.client.WebClient;
-
-import ca.uhn.fhir.rest.annotation.RequiredParam;
-import ca.uhn.fhir.rest.annotation.Search;
-import ca.uhn.fhir.rest.server.IResourceProvider;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 import reactor.core.publisher.Flux;
 
 @RequiredArgsConstructor
@@ -53,6 +45,5 @@ public class PatientResourceProvider implements IResourceProvider {
 			patient.setGender("Female".equals(c.getGender()) ? AdministrativeGender.FEMALE : AdministrativeGender.MALE);
 			return patient;
 		}).collect(toList());
-
 	}
 }

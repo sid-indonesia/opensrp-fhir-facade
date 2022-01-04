@@ -1,3 +1,4 @@
+/* (C)2022 */
 package org.sidindonesia.rdtfhirfacade.config;
 
 import org.springframework.beans.factory.annotation.Value;

@@ -1,3 +1,4 @@
+/* (C)2022 */
 package org.sidindonesia.rdtfhirfacade;
 
 import org.springframework.boot.SpringApplication;
@@ -11,5 +12,4 @@ public class RdtFhirFacadeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RdtFhirFacadeApplication.class, args);
 	}
-
 }
