@@ -41,7 +41,7 @@ dependencies {
 	}
 	implementation "org.smartregister:hapi-fhir-keycloak:0.0.6-SNAPSHOT"
 	//implementation "org.keycloak:keycloak-spring-boot-starter"
-	//implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'

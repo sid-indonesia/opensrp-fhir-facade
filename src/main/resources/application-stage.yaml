@@ -8,3 +8,16 @@ keycloak:
   principal-attribute: preferred_username
   credentials: 
     secret: "changethis"
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            authorization-grant-type: client_credentials
+            client-id: ${keycloak.resource}
+            client-secret: ${keycloak.credentials.secret}
+        provider:
+          keycloak:
+            token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
