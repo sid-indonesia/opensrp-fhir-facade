@@ -1,0 +1,10 @@
+opensrp-server:
+  base-url: https://rdt.stage.sid-indonesia.org/opensrp
+
+keycloak:
+  realm: rdt-stage
+  resource: dev-client
+  auth-server-url: https://keycloak.stage.sid-indonesia.org/auth
+  principal-attribute: preferred_username
+  credentials: 
+    secret: "changethis"
