@@ -7,6 +7,8 @@ import ca.uhn.fhir.rest.server.interceptor.ResponseHighlighterInterceptor;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import lombok.RequiredArgsConstructor;
+
+import org.sidindonesia.rdtfhirfacade.provider.ObservationResourceProvider;
 import org.sidindonesia.rdtfhirfacade.provider.PatientResourceProvider;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -21,7 +23,7 @@ public class FhirRestfulServer extends RestfulServer {
 		setFhirContext(FhirContext.forR4());
 
 		// Register resource providers
-		registerProvider(new PatientResourceProvider(webClient));
+		registerProviders(new PatientResourceProvider(webClient), new ObservationResourceProvider(webClient));
 
 		// Format the responses in nice HTML
 		registerInterceptor(new ResponseHighlighterInterceptor());
