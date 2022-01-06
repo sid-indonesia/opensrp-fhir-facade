@@ -1,3 +1,4 @@
+/* (C)2022 */
 package org.sidindonesia.rdtfhirfacade;
 
 import org.junit.jupiter.api.Test;
@@ -9,5 +10,4 @@ class RdtFhirFacadeApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
