@@ -4,7 +4,7 @@ opensrp-server:
 keycloak:
   realm: rdt-stage
   resource: dev-client
-  auth-server-url: https://keycloak.rdt.stage.sid-indonesia.org/auth
+  auth-server-url: https://keycloak.stage.sid-indonesia.org/auth
   principal-attribute: preferred_username
   credentials: 
     secret: "changethis"
@@ -17,3 +17,6 @@ spring:
           keycloak:
             client-id: oauth-client
             client-secret: "changethis"
+        provider:
+          keycloak:
+            token-uri: https://keycloak.rdt.stage.sid-indonesia.org/auth/realms/${keycloak.realm}/protocol/openid-connect/token
