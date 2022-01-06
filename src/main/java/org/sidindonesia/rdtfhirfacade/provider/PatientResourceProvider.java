@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.hl7.fhir.r4.model.Enumerations.AdministrativeGender;
 import org.hl7.fhir.r4.model.Patient;
+import org.hl7.fhir.r4.model.StringType;
 import org.opensrp.api.domain.Client;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
@@ -26,7 +27,7 @@ public class PatientResourceProvider implements IResourceProvider {
 	}
 
 	@Search()
-	public List<Patient> search(@RequiredParam(name = Patient.SP_NAME) String name) {
+	public List<Patient> search(@RequiredParam(name = Patient.SP_NAME) StringType name) {
 		Flux<Client> client = webClient.get()
 				.uri(builder -> builder.path("/rest/client/search").queryParam("name", name).build()).retrieve()
 				.bodyToFlux(Client.class);

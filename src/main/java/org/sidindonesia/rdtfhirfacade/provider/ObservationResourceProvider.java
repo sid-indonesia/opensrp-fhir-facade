@@ -48,6 +48,7 @@ public class ObservationResourceProvider implements IResourceProvider {
 	@Search
 	public List<Observation> search() {
 		List<Observation> retVal = new ArrayList<>(); // populate this
+		// Communicatie with OpenSRP Server API
 		Observation observation = new Observation()
 				.setCode(new CodeableConcept(new Coding("testSystem", "testCode", "testDisplay")));
 		observation.setId("testId");
