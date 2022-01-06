@@ -1,10 +1,10 @@
 opensrp-server:
-  base-url: https://ancs.stage.sid-indonesia.org/opensrp
+  base-url: https://ancs.dev.sid-indonesia.org/opensrp
 
 keycloak:
-  realm: ancs
-  resource: stage-client
-  auth-server-url: https://keycloak.stage.sid-indonesia.org/auth
+  realm: ancs-dev
+  resource: dev-client
+  auth-server-url: https://keycloak.dev.sid-indonesia.org/auth
   principal-attribute: preferred_username
   credentials: 
     secret: "changethis"
@@ -19,4 +19,4 @@ spring:
             client-secret: "changethis"
         provider:
           keycloak:
-            token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
+            token-uri: https://keycloak.ancs.dev.sid-indonesia.org/auth/realms/${keycloak.realm}/protocol/openid-connect/token
