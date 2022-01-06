@@ -1,2 +1,2 @@
-# rdt-fhir-facade
-HAPI FHIR Facade to RDT app ecosystem
+# opensrp-fhir-facade
+HAPI FHIR Facade for OpenSRP Server

@@ -1,11 +1,11 @@
 /* (C)2022 */
-package org.sidindonesia.rdtfhirfacade;
+package org.sidindonesia.opensrpfhirfacade;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RdtFhirFacadeApplicationTests {
+class OpenSRPFhirFacadeApplicationTests {
 
 	@Test
 	void contextLoads() {
