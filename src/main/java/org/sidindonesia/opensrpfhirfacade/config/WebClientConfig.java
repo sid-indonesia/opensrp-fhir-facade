@@ -1,5 +1,5 @@
 /* (C)2022 */
-package org.sidindonesia.rdtfhirfacade.config;
+package org.sidindonesia.opensrpfhirfacade.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
